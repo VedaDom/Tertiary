@@ -42,7 +42,7 @@ class UsersPage extends React.Component {
                                     this.props.users.map(item => (<tr key={item.id} className="hover:bg-gray-100 cursor-pointer">
                                     <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap">{item.firstname + " " + item.lastname}</td>
                                     <td className="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap">{item.email}</td>
-                                    <td className="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap">{item.role}</td>
+                                    <td className={`py-4 px-6 text-sm font-medium ${item.role === "ADMIN" ? 'text-blue-600' : 'text-gray-900'} whitespace-nowrap`}>{item.role}</td>
                                 </tr>))
                                 }                                
                             </tbody>

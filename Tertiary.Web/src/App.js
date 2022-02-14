@@ -58,7 +58,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { isAdmin } = this.props;
+    const { isAdmin } = this.state;
     return (
       <Router history={browserHistory}>
         <Routes>
